@@ -6,6 +6,7 @@ you will use Cosmos DB to work with **key-value data** in **Azure Table storage*
 To get started, you must provision an **instance of Azure Cosmos DB**.
 ### Steps:
 1. In the Microsoft Azure portal, in the menu, click New. Then in the Databases menu, click **Azure Cosmos DB**.
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img1.PNG)
 2. In the Azure Cosmos DB blade, enter the following settings, and then click Create:
 - ID: Enter a unique ID for your Cosmos DB service
 - API: Table (key-value)
@@ -17,19 +18,24 @@ To get started, you must provision an **instance of Azure Cosmos DB**.
 **Cosmos DB** supports Azure Table Storage for **key-value pairs**.
 1. View the blade for the Cosmos DB instance you created for table storage, and click the Data Explorer tab.
 2. In the Data Explorer, click New Table.
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img2.PNG)
 3. In the Add Table pane, enter the following details and click OK:
 - Table Id: Employees
 - Storage capacity: Fixed (10 GB)
 - Throughput: 2000
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img4.PNG)
 4. In the **Data Explorer**, expand the new **Employees** table and select **Entities**.
 5. In the **Entitie**s tab, click **Add Entity**.
 6. In the Add Table Entity pane, Enter the following property values (clicking + Add Property as required) and then click Add Entity.
 ### Query a Table
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img5.PNG)
 Now that you have some data in your table, you can query it.
 1. In the Entities pane, click Add new clause.
 2. Set the following properties for the clause:
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img6.PNG)
 3. Click  Run to run the query and apply the filter. Note that only the rows where the PartitionKey value is “Marketing” are returned.
 4. Click Add new clause to add a second clause to the query.
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img7.PNG)
 ## Exercise 2: Working with Documents
 In this exercise, you will use Azure Cosmos DB to work with a collection of JSON documents.
 ### Provision Azure Cosmos DB for Document Storage
@@ -46,9 +52,11 @@ To get started, you must provision an instance of Azure Cosmos DB.
 ## Create a Document Collection
 **Cosmos DB** supports Document DB databases for collections of **JSON** documents
 1. View the blade for the Cosmos DB instance you created for document storage, and click the **Data Explorer** tab.
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img9.PNG)
 2. In the Data Explorer, click **New Collection**.
 4. In the Data Explorer, expand the new **EmployeeDocs collection** and select **Documents**.
 5. In the **Documents** tab, click **New Document**.
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img10.PNG)
 6. In the document editor, create the following JSON document and then click Save:
 ```
 {
@@ -59,6 +67,7 @@ To get started, you must provision an instance of Azure Cosmos DB.
 "lastName": "Drayton"
 }
 ```
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img11.PNG)
 7. Click New Document and create a second document with the following JSON:
 ```
 {
@@ -83,6 +92,7 @@ To get started, you must provision an instance of Azure Cosmos DB.
 Now that you have a collection of documents, you can query it:
 1. In the Data Explorer, click New SQL Query.
 2. In the Query 1 tab, modify the existing query to use the following SQL statement:
+![alt text](https://github.com/udayallu/NoSQL-Data-in-Microsoft-Azure/blob/master/No-sql/img12.PNG)
 ```SELECT c.firstName, c.lastName
 FROM c
 WHERE c.dept = 'Marketing'
